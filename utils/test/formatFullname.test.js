@@ -24,9 +24,9 @@ describe('formatFullname', () => {
     expect(formatFullname('Jan Roch Lech')).to.equal('Error');
   });
   it('should return proper format of a 2 words string, john doE -> John Doe', () => {
-    expect(formatFullname('john doe')).to.equal('John Doe');
-    expect(formatFullname('jOHn doE')).to.equal('John Doe');    
-    expect(formatFullname('John Doe')).to.equal('John Doe');
+    for (let key of Object.keys(mockData)){
+      expect(formatFullname(key)).to.equal(mockData[key]);
+    }
   });
  
 });
